@@ -8,6 +8,11 @@ import {
 } from "@remix-run/react";
 
 import type { MetaFunction } from "@remix-run/node";
+import styled from "styled-components";
+
+const Html = styled.html`
+  height: 100%;
+`;
 
 export const meta: MetaFunction = () => ({
   charset: "utf-8",
@@ -17,11 +22,11 @@ export const meta: MetaFunction = () => ({
 
 export default function App() {
   return (
-    <html lang="en">
+    <Html lang="en">
       <head>
         <Meta />
         <Links />
-        {typeof document === "undefined" ? "__STYLES__" : null}
+        {/* {typeof document === "undefined" ? "__STYLES__" : null} */}
       </head>
       <body>
         <Outlet />
@@ -29,6 +34,6 @@ export default function App() {
         <Scripts />
         <LiveReload />
       </body>
-    </html>
+    </Html>
   );
 }
