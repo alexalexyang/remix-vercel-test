@@ -1,4 +1,4 @@
-import { format } from "date-fns";
+// import { format } from "date-fns";
 import styled from "styled-components";
 
 const H1 = styled.h1`
@@ -8,11 +8,17 @@ const H1 = styled.h1`
 `;
 
 export default function Index() {
+  const now = new Date();
+  const hr = now.getHours();
+  const min = now.getMinutes();
+
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <H1>Welcome to Remix</H1>
 
-      <h2>{format(new Date(), "kk:mm")}</h2>
+      <h2>
+        {hr}:{min}
+      </h2>
     </div>
   );
 }
