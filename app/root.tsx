@@ -12,6 +12,7 @@ import styled from "styled-components";
 
 const Html = styled.html`
   height: 100%;
+  background-color: lavenderblush;
 `;
 
 export const meta: MetaFunction = () => ({
