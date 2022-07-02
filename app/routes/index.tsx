@@ -21,7 +21,7 @@ export default function Index() {
       <H1>Welcome to Remix</H1>
 
       <h2>
-        {hr}:{min}
+        {`${hr}:${min}`}
         {`${yr}-${mth}-${dd}`}
       </h2>
     </div>
